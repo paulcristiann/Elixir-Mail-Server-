@@ -3,6 +3,14 @@
 
 TCP Email Server coded in Elixir using Task and gen_tcp.
 
+To run:
+
+ 1. [install Elixir](https://elixir-lang.org/install.html)
+ 2. open CMD and type `iex`
+ 3. type `c("mail_server.ex")`
+ 4. type `MailServer.start`
+
+
 ### Server specifications
 Running by default on port 6969
 
