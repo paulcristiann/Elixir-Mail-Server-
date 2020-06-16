@@ -155,7 +155,7 @@ defmodule MailServer do
                   String.split(line, " ")
                   |> (fn(x) -> Map.put(result, hd(x), List.last(x)) end).()
                   end)
-                :gen_tcp.send(socket, "OK #{Enum.map(user_emails_map, fn {k,_} -> "#{k} READ" end)}\r\n")
+                :gen_tcp.send(socket, "OK #{Enum.map(user_emails_map, fn {k,_} -> "#{k} " end)}\r\n")
               :error -> :gen_tcp.send(socket, "ERROR Invalid token\r\n")
             end
           {:error, exception} -> :gen_tcp.send(socket, "ERROR Internal Server Error - #{exception}\r\n")
